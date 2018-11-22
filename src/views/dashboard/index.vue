@@ -1,6 +1,6 @@
 <template>
-  <div class="app-wrapper">
-
+  <div>
+    123asdf
   </div>
 </template>
 
