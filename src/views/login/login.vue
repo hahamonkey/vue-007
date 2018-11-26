@@ -1,6 +1,6 @@
 <template>
   <div class="login-container">
-    <el-form ref="loginForm" :model="loginForm" class="login-form" label-position="left" :rules="loginRules">
+    <el-form ref="loginForm" :model="loginForm" class="login-form" label-position="right" :rules="loginRules">
       <div class="title-container">
         <h3 class="title">{{ $t('login.title') }}</h3>
         <lang-select class="set-language" />

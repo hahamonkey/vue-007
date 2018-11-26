@@ -1,12 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Login from '@/views/login/login'
-import Layout from '@/views/layout/Layout'
+import Navbar from '@/views/layout/components/Navbar'
+
 
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/login',
@@ -14,17 +16,9 @@ export default new Router({
       component: Login
     },
     {
-      path: '',
-      component: Layout,
-      redirect: 'dashboard',
-      children: [
-        {
-          path: 'dashboard',
-          name: 'Dashboard',
-          component: () => import('@/views/dashboard/index'),
-          // meta: { title: 'dashboard', icon: 'dashboard', noCache: true }
-        }
-      ]
+      path: '/',
+      component: Navbar,
+      name: 'Navbar',
     }
   ]
 })
